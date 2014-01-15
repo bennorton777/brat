@@ -74,8 +74,8 @@ public class TextOverlay extends AbstractColorChooserPanel implements Refreshabl
         g2d.setPaint(color);
         g2d.setFont(font);
         FontMetrics fm = g2d.getFontMetrics();
-        int x = img.getWidth() - fm.stringWidth(text) - 5;
-        int y = fm.getHeight();
+        int x = (img.getWidth()/2) - (fm.stringWidth(text)/2) - 5;
+        int y = img.getHeight();
         g2d.drawString(text, x, y);
         g2d.dispose();
         newImage = img;
@@ -105,66 +105,9 @@ public class TextOverlay extends AbstractColorChooserPanel implements Refreshabl
         return this;
     }
 
-    private static void create() {
-
-        try {
-
-            JFrame f = new JFrame();
-            JColorChooser chooser = new JColorChooser();
-            Refresher refresher = new Refresher(chooser);
-            chooser.getSelectionModel().addChangeListener(refresher);
-            OptionsPanel optionsPanel = new OptionsPanel(refresher);
-
-            for (AbstractColorChooserPanel panel : chooser.getChooserPanels()) {
-                if (!panel.getDisplayName().equals("HSL")) {
-                    chooser.removeChooserPanel(panel);
-                }
-            }
-
-            chooser.addChooserPanel(optionsPanel);
-
-            JPanel superPanel = new JPanel(new GridBagLayout());
-            GridBagConstraints guiConstraints = new GridBagConstraints();
-            guiConstraints.gridheight = 2;
-            guiConstraints.gridwidth = 2;
-
-            guiConstraints.gridx = 0;
-            guiConstraints.gridy = 0;
-            superPanel.add(chooser, guiConstraints);
-
-            guiConstraints.gridx = 1;
-            guiConstraints.gridy = 0;
-            superPanel.add(new FontChooserComboBox(), guiConstraints);
-
-            guiConstraints.gridx = 0;
-            guiConstraints.gridy = 1;
-            TextOverlay overlayPanel = new TextOverlay().save("C:\\Users\\ben\\Desktop\\output.png");
-            refresher.addListener(overlayPanel);
-            superPanel.add(overlayPanel);
-
-            f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            f.add(superPanel);
-            f.pack();
-            f.setVisible(true);
-        } catch (Exception E) {
-            System.err.println("OH NO BRO!");
-        }
-    }
-
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-
-            @Override
-            public void run() {
-                create();
-            }
-        });
-    }
-
     @Override
     public void refresh(RefreshData refreshData) {
         stripText();
-        System.err.println("Refreshing");
         overlay(cleanImage, text, refreshData.getColor(), refreshData.getFont());
         this.repaint();
     }
