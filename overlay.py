@@ -38,8 +38,11 @@ for dirPath, dirNames, fileNames in os.walk('.'):
 					if not dirPath == '.':
 						fullFileName = dirPath + fileName
 
-					print 'convert ' + fullFileName + ' -font Arial -pointsize 180 -draw "gravity south fill black  text 0,12 \'' + name + '\' fill white  text 1,11 \'' + name + '\'" \'' + OUTPUT_DIR + fileName + '\''
-					subprocess.call('convert ' + dirPath + fileName + ' -font Arial -pointsize 180 -draw "gravity south fill black  text 0,12 ' + name + ' fill white  text 1,11 ' + name + ' " "' + OUTPUT_DIR + fileName + '"')
+					command = 'convert ' + fullFileName + ' -font Arial -pointsize 180 -draw "gravity south fill black  text 0,12 ' + name + ' fill white  text 1,11 \'' + name + '\'" \'' + OUTPUT_DIR + fileName + '\''
+					print command
+					subprocess.call(command)
 				except IndexError:
 					print 'Unable to access the ' + str(nameIndex + 1) + '\'th name in the roster file.  Perhaps an image is named a number that is less than 1, or larger than the number of residents.'
 					sys.exit()
+				except CalledProcessError:
+					print 'Unable to run command: ' + command
