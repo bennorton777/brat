@@ -17,7 +17,6 @@ import javax.swing.colorchooser.AbstractColorChooserPanel;
  * This class is a JPanel wrapper for an image, with the capability to overlay text onto the image.
  * This class's methods follow the builder pattern in most cases.  Any exceptions are documented.
  */
-//TODO JSON config files hydrated to classes, pls
 public class PreviewPanel extends AbstractColorChooserPanel implements Refreshable {
 
     private BufferedImage newImage;
@@ -106,7 +105,6 @@ public class PreviewPanel extends AbstractColorChooserPanel implements Refreshab
 
     @Override
     public void refresh(RefreshData refreshData) {
-        System.out.println("Perhaps I should not be worthless!");
         stripText();
         overlay(cleanImage, text, refreshData.getColor(), refreshData.getFont());
         this.repaint();

@@ -1,5 +1,6 @@
 package main.java.com.ben.brat.panels;
 
+import main.java.com.ben.brat.control.Common;
 import main.java.com.ben.brat.control.JFontChooser;
 import main.java.com.ben.brat.control.RefreshData;
 import main.java.com.ben.brat.control.Refresher;
@@ -25,14 +26,19 @@ public class FontPanel extends AbstractColorChooserPanel implements Refreshable 
         _refresher = refresher;
         _refresher.addListener(this);
 
-        guiConstraints.gridheight = 1;
+        guiConstraints.gridheight = 2;
         guiConstraints.gridwidth = 2;
 
         Font currentFont = _refresher.getRefreshData().getFont();
-        JLabel fontDescription = new JLabel("Current font is: " + currentFont.getFontName() + " with font size: " + currentFont.getSize() + " and font style: " + currentFont.getStyle());
+        JLabel fontDescription = new JLabel("Current font is: " + currentFont.getFontName() + " with font size: " + currentFont.getSize() + ".");
 
         JButton fontButton = new JButton("Change the Font");
-        this.add(fontButton);
+
+        JTextField sampleText = new JTextField("Placeholder text");
+
+        Common.addToGridPanel(this, fontDescription, 0, 0, guiConstraints);
+        Common.addToGridPanel(this, fontButton, 1, 0, guiConstraints);
+        Common.addToGridPanel(this, sampleText, 0, 1, guiConstraints);
         fontButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e)

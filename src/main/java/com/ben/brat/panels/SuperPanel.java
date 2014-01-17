@@ -14,7 +14,6 @@ import java.awt.*;
  */
 public class SuperPanel extends JPanel {
 
-    private GridBagLayout layout = new GridBagLayout();
     private GridBagConstraints guiConstraints = new GridBagConstraints();
 
     public SuperPanel() {
@@ -33,7 +32,7 @@ public class SuperPanel extends JPanel {
             refresher.addListener(previewPanel);
 
             tabbedPane.addTab("Color", colorPanel);
-            tabbedPane.addTab("Font", fontPanel);
+            tabbedPane.addTab("Text", fontPanel);
 
             Common.addToGridPanel(this, tabbedPane, 0, 0, guiConstraints);
             Common.addToGridPanel(this, previewPanel, 1, 0, guiConstraints);
