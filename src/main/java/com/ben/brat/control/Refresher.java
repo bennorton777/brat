@@ -5,19 +5,15 @@ import main.java.com.ben.brat.interfaces.Refreshable;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-public class Refresher implements ChangeListener, Refreshable {
+public class Refresher {
+    private RefreshData refreshData = new RefreshData();
+    private List<Refreshable> listeners = new ArrayList<Refreshable>();
 
-    private RefreshData refreshData;
-    private List<Refreshable> listeners;
-    private JColorChooser chooser;
-
-    public Refresher(JColorChooser observable) {
-        refreshData = new RefreshData();
-        listeners = new ArrayList<Refreshable>();
-        chooser = observable;
+    public Refresher() {
     }
 
     public Refresher addListener(Refreshable listener) {
@@ -25,17 +21,11 @@ public class Refresher implements ChangeListener, Refreshable {
         return this;
     }
 
-    public void stateChanged(ChangeEvent unsafe) {
+    public void refresh() {
         for (Refreshable listener : listeners) {
-            refreshData.setColor(chooser.getColor());
-            System.out.println("This is the key");
+            System.err.println("Trying to refresh: " + listener);
             listener.refresh(refreshData);
         }
-    }
-
-    @Override
-    public void refresh(RefreshData unsafe) {
-        stateChanged(null);
     }
 
     public RefreshData getRefreshData() {

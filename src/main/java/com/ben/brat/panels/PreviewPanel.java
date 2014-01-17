@@ -2,8 +2,6 @@ package main.java.com.ben.brat.panels;
 
 import main.java.com.ben.brat.control.RefreshData;
 import main.java.com.ben.brat.control.Refresher;
-import main.java.com.ben.brat.control.JFontChooser;
-import main.java.com.ben.brat.control.FontChooserComboBox;
 import main.java.com.ben.brat.interfaces.Refreshable;
 
 import java.awt.*;
@@ -20,14 +18,15 @@ import javax.swing.colorchooser.AbstractColorChooserPanel;
  * This class's methods follow the builder pattern in most cases.  Any exceptions are documented.
  */
 //TODO JSON config files hydrated to classes, pls
-public class TextOverlay extends AbstractColorChooserPanel implements Refreshable {
+public class PreviewPanel extends AbstractColorChooserPanel implements Refreshable {
 
     private BufferedImage newImage;
     private BufferedImage cleanImage;
     private String text = "Such Dumb";
 
     //TODO Submit images through things other than urls.
-    public TextOverlay() {
+    public PreviewPanel(Refresher refresher) {
+        refresher.addListener(this);
         try {
             cleanImage = newImage = ImageIO.read(new URL(
                     "http://d22r54gnmuhwmk.cloudfront.net/photos/3/yi/to/cTyItoocJlulYjJ-556x313-noPad.jpg"));
@@ -36,7 +35,7 @@ public class TextOverlay extends AbstractColorChooserPanel implements Refreshabl
         }
         this.setPreferredSize(new Dimension(
                 newImage.getWidth(), newImage.getHeight()));
-        newImage = overlay(newImage, text, Color.red, new Font("Serif", Font.BOLD, 20));
+        newImage = overlay(newImage, text, Color.white, new Font("Serif", Font.BOLD, 20));
     }
 
     @Override
@@ -82,7 +81,7 @@ public class TextOverlay extends AbstractColorChooserPanel implements Refreshabl
         return img;
     }
 
-    public TextOverlay stripText () {
+    public PreviewPanel stripText () {
         newImage = cleanImage;
         return this;
     }
@@ -99,7 +98,7 @@ public class TextOverlay extends AbstractColorChooserPanel implements Refreshabl
      * @param name This should be the fully qualified path of the saved file's name.  THIS WILL OVERWRITE FILES.
      * @throws IOException
      */
-    public TextOverlay save(String name) throws IOException{
+    public PreviewPanel save(String name) throws IOException{
         File outfile = new File(name);
         ImageIO.write(newImage, "png", outfile);
         return this;
@@ -107,6 +106,7 @@ public class TextOverlay extends AbstractColorChooserPanel implements Refreshabl
 
     @Override
     public void refresh(RefreshData refreshData) {
+        System.out.println("Perhaps I should not be worthless!");
         stripText();
         overlay(cleanImage, text, refreshData.getColor(), refreshData.getFont());
         this.repaint();

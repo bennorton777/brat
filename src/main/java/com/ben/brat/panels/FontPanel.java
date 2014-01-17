@@ -10,20 +10,28 @@ import javax.swing.colorchooser.AbstractColorChooserPanel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Class description here
  * Package: main.java.com.ben.brat.panels
  */
-public class OptionsPanel extends AbstractColorChooserPanel{
+public class FontPanel extends AbstractColorChooserPanel implements Refreshable {
 
-    Refresher _refresher;
+    private GridBagLayout layout = new GridBagLayout();
+    private GridBagConstraints guiConstraints = new GridBagConstraints();
+    private Refresher _refresher;
 
-    public OptionsPanel(Refresher refresher) {
+    public FontPanel(Refresher refresher) {
         _refresher = refresher;
-        JButton fontButton = new JButton("Font");
+        _refresher.addListener(this);
+
+        guiConstraints.gridheight = 1;
+        guiConstraints.gridwidth = 2;
+
+        Font currentFont = _refresher.getRefreshData().getFont();
+        JLabel fontDescription = new JLabel("Current font is: " + currentFont.getFontName() + " with font size: " + currentFont.getSize() + " and font style: " + currentFont.getStyle());
+
+        JButton fontButton = new JButton("Change the Font");
         this.add(fontButton);
         fontButton.addActionListener(new ActionListener() {
 
@@ -35,15 +43,13 @@ public class OptionsPanel extends AbstractColorChooserPanel{
                     Font font = fontChooser.getSelectedFont();
                     updateFont(font);
                 }
-                _refresher.getRefreshData().setLastEvent(e);
-                _refresher.refresh(null);
-                System.out.println("You clicked the button: " + e.getActionCommand());
             }
         });
     }
 
     public void updateFont(Font font) {
         _refresher.getRefreshData().setFont(font);
+        _refresher.refresh();
     }
 
     @Override
@@ -69,5 +75,10 @@ public class OptionsPanel extends AbstractColorChooserPanel{
     @Override
     public Icon getLargeDisplayIcon() {
         return null;
+    }
+
+    @Override
+    public void refresh(RefreshData refreshData) {
+
     }
 }

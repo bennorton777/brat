@@ -1,5 +1,6 @@
 package main.java.com.ben.brat.control;
 
+import javax.swing.event.ChangeEvent;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
@@ -10,7 +11,6 @@ import java.awt.event.ActionEvent;
 public class RefreshData {
     private Font _font;
     private Color _color;
-    private ActionEvent _lastEvent;
 
     public RefreshData () {
         _font = new Font("Serif", Font.BOLD, 20);
@@ -31,13 +31,5 @@ public class RefreshData {
 
     public void setColor(Color color) {
         _color = color;
-    }
-
-    public ActionEvent getLastEvent() {
-        return _lastEvent;
-    }
-
-    public void setLastEvent(ActionEvent lastEvent) {
-        _lastEvent = lastEvent;
     }
 }
