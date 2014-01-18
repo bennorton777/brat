@@ -1,9 +1,6 @@
 package main.java.com.ben.brat.panels;
 
-import main.java.com.ben.brat.control.Common;
-import main.java.com.ben.brat.control.JFontChooser;
-import main.java.com.ben.brat.control.RefreshData;
-import main.java.com.ben.brat.control.Refresher;
+import main.java.com.ben.brat.control.*;
 import main.java.com.ben.brat.interfaces.Refreshable;
 
 import javax.swing.*;
@@ -34,7 +31,7 @@ public class FontPanel extends AbstractColorChooserPanel implements Refreshable 
 
         JButton fontButton = new JButton("Change the Font");
 
-        JTextField sampleText = new JTextField("Placeholder text");
+        UpdatingField sampleText = new UpdatingField(refresher);
 
         Common.addToGridPanel(this, fontDescription, 0, 0, guiConstraints);
         Common.addToGridPanel(this, fontButton, 1, 0, guiConstraints);

@@ -28,11 +28,13 @@ public class SuperPanel extends JPanel {
             PreviewPanel previewPanel = new PreviewPanel(refresher).save("C:\\Users\\ben\\Desktop\\output.png");
             ColorChooserPanel colorPanel = new ColorChooserPanel(refresher);
             FontPanel fontPanel = new FontPanel(refresher);
+            BatchPanel batchPanel = new BatchPanel(refresher);
 
             refresher.addListener(previewPanel);
 
-            tabbedPane.addTab("Color", colorPanel);
-            tabbedPane.addTab("Text", fontPanel);
+            tabbedPane.addTab("Color Options", colorPanel);
+            tabbedPane.addTab("Text Options", fontPanel);
+            tabbedPane.addTab("Batch Options", batchPanel);
 
             Common.addToGridPanel(this, tabbedPane, 0, 0, guiConstraints);
             Common.addToGridPanel(this, previewPanel, 1, 0, guiConstraints);

@@ -21,7 +21,6 @@ public class PreviewPanel extends AbstractColorChooserPanel implements Refreshab
 
     private BufferedImage newImage;
     private BufferedImage cleanImage;
-    private String text = "Such Dumb";
 
     //TODO Submit images through things other than urls.
     public PreviewPanel(Refresher refresher) {
@@ -34,7 +33,7 @@ public class PreviewPanel extends AbstractColorChooserPanel implements Refreshab
         }
         this.setPreferredSize(new Dimension(
                 newImage.getWidth(), newImage.getHeight()));
-        newImage = overlay(newImage, text, Color.white, new Font("Serif", Font.BOLD, 20));
+        newImage = overlay(newImage, refresher.getRefreshData().getText(), Color.white, new Font("Serif", Font.BOLD, 20));
     }
 
     @Override
@@ -106,7 +105,7 @@ public class PreviewPanel extends AbstractColorChooserPanel implements Refreshab
     @Override
     public void refresh(RefreshData refreshData) {
         stripText();
-        overlay(cleanImage, text, refreshData.getColor(), refreshData.getFont());
+        overlay(cleanImage, refreshData.getText(), refreshData.getColor(), refreshData.getFont());
         this.repaint();
     }
 }
