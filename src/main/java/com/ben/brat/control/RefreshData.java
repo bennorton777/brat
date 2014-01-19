@@ -3,6 +3,7 @@ package main.java.com.ben.brat.control;
 import javax.swing.event.ChangeEvent;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.image.BufferedImage;
 import java.util.*;
 import java.util.List;
 
@@ -15,12 +16,14 @@ public class RefreshData {
     private Color _color;
     private String _text;
     private List<String> _names;
+    private List<BufferedImage> _images;
 
     public RefreshData () {
         _font = new Font("Serif", Font.BOLD, 20);
         _color = Color.white;
         _text = "Placeholder Text";
         _names = new ArrayList<String>();
+        _images = new ArrayList<BufferedImage>();
     }
 
     public Font getFont() {
@@ -53,5 +56,13 @@ public class RefreshData {
 
     public void setNames(List<String> names) {
         _names = names;
+    }
+
+    public List<BufferedImage> getImages() {
+        return _images;
+    }
+
+    public void setImages(List<BufferedImage> images) {
+        _images = images;
     }
 }

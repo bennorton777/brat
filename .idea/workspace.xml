@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f891b20b-7abc-4054-a632-8f1087a33d69" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/BatchPanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/BatchPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/FontPanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/FontPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/PreviewPanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/PreviewPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ben/brat/control/RefreshData.java" afterPath="$PROJECT_DIR$/src/main/java/com/ben/brat/control/RefreshData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/SuperPanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/SuperPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ben/brat/control/UpdatingField.java" afterPath="$PROJECT_DIR$/src/main/java/com/ben/brat/control/UpdatingField.java" />
     </list>
     <ignored path="brat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,21 +77,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/ben/brat/control/UpdatingField.java" line="51" class="main.java.com.ben.brat.control.UpdatingField.UpdatingDocument" package="main.java.com.ben.brat.control">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -101,34 +87,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SuperPanel.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/SuperPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="60" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.33866668" vertical-offset="383" max-vertical-offset="867">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BatchPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/BatchPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="34" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.0" vertical-offset="730" max-vertical-offset="1275">
+            <state line="79" column="0" selection-start="3773" selection-end="3773" vertical-scroll-proportion="-10.076923" vertical-offset="1081" max-vertical-offset="1819">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#986#2274#0" expanded="true" />
-                <element signature="e#2263#2264#0" expanded="true" />
+                <element signature="e#1073#2361#0" expanded="true" />
+                <element signature="e#2350#2351#0" expanded="true" />
+                <element signature="e#2412#3951#0" expanded="true" />
+                <element signature="e#3940#3941#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FontPanel.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BasicButtonListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_05/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="251" column="0" selection-start="8172" selection-end="8172" vertical-scroll-proportion="0.0" vertical-offset="3598" max-vertical-offset="4947">
+              <folding>
+                <element signature="e#0#10194#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FontPanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/FontPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="60" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1394">
+            <state line="42" column="8" selection-start="1346" selection-end="1346" vertical-scroll-proportion="0.77022654" vertical-offset="357" max-vertical-offset="1530">
               <folding />
             </state>
           </provider>
@@ -137,7 +126,7 @@
       <file leaf-file-name="PreviewPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/PreviewPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="32" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+            <state line="39" column="20" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0" vertical-offset="1548" max-vertical-offset="1870">
               <folding />
             </state>
           </provider>
@@ -155,7 +144,7 @@
       <file leaf-file-name="UpdatingField.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/control/UpdatingField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="32" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
+            <state line="27" column="21" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="816">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,16 +182,20 @@
       <file leaf-file-name="RefreshData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/control/RefreshData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="28" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="867">
+            <state line="13" column="26" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1037">
               <folding>
-                <element signature="e#866#867#0" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
-                <element signature="e#934#935#0" expanded="true" />
-                <element signature="e#962#963#0" expanded="true" />
-                <element signature="e#1000#1001#0" expanded="true" />
-                <element signature="e#1029#1030#0" expanded="true" />
-                <element signature="e#1077#1078#0" expanded="true" />
-                <element signature="e#1107#1108#0" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+                <element signature="e#1062#1063#0" expanded="true" />
+                <element signature="e#1090#1091#0" expanded="true" />
+                <element signature="e#1128#1129#0" expanded="true" />
+                <element signature="e#1157#1158#0" expanded="true" />
+                <element signature="e#1205#1206#0" expanded="true" />
+                <element signature="e#1235#1236#0" expanded="true" />
+                <element signature="e#1281#1282#0" expanded="true" />
+                <element signature="e#1311#1312#0" expanded="true" />
+                <element signature="e#1368#1369#0" expanded="true" />
+                <element signature="e#1400#1401#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -252,12 +245,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/control/Refresher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/ColorChooserPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/control/Common.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/FontPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/control/UpdatingField.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/SuperPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/PreviewPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/control/RefreshData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/BatchPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/SuperPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/control/UpdatingField.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ben/brat/panels/FontPanel.java" />
       </list>
     </option>
   </component>
@@ -819,8 +812,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -829,7 +822,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968652" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.338558" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42163008" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -839,7 +832,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25256222" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.338558" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42163008" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -937,14 +930,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="5" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="697">
           <folding>
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1400#1401#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1010,14 +1007,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="5" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="833">
           <folding>
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1400#1401#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1146,9 +1147,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/SuperPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="22" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_05/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="251" column="0" selection-start="8172" selection-end="8172" vertical-scroll-proportion="0.0" vertical-offset="3598" max-vertical-offset="4947">
+          <folding>
+            <element signature="e#0#10194#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/control/RefreshData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="26" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1037">
+          <folding>
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1400#1401#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/PreviewPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="20" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="1870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/BatchPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="3773" selection-end="3773" vertical-scroll-proportion="-10.076923" vertical-offset="1081" max-vertical-offset="1819">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1073#2361#0" expanded="true" />
+            <element signature="e#2350#2351#0" expanded="true" />
+            <element signature="e#2412#3951#0" expanded="true" />
+            <element signature="e#3940#3941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/control/UpdatingField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="32" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
+        <state line="27" column="21" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="816">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1157,51 +1217,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/FontPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="60" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="1394">
+        <state line="42" column="8" selection-start="1346" selection-end="1346" vertical-scroll-proportion="0.77022654" vertical-offset="357" max-vertical-offset="1530">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/PreviewPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="32" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="1785">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/control/RefreshData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="28" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="867">
-          <folding>
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/BatchPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="34" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.0" vertical-offset="730" max-vertical-offset="1275">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#986#2274#0" expanded="true" />
-            <element signature="e#2263#2264#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ben/brat/panels/SuperPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="60" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.33866668" vertical-offset="383" max-vertical-offset="867">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

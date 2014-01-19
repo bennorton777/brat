@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -23,17 +24,22 @@ public class PreviewPanel extends AbstractColorChooserPanel implements Refreshab
     private BufferedImage cleanImage;
 
     //TODO Submit images through things other than urls.
-    public PreviewPanel(Refresher refresher) {
+    public PreviewPanel(Refresher refresher) throws IOException {
+        this(refresher,
+                ImageIO.read(new URL(
+                        "http://d22r54gnmuhwmk.cloudfront.net/photos/3/yi/to/cTyItoocJlulYjJ-556x313-noPad.jpg")),
+                refresher.getRefreshData().getText());
+    }
+
+    public PreviewPanel (Refresher refresher, BufferedImage image, String text) {
         refresher.addListener(this);
-        try {
-            cleanImage = newImage = ImageIO.read(new URL(
-                    "http://d22r54gnmuhwmk.cloudfront.net/photos/3/yi/to/cTyItoocJlulYjJ-556x313-noPad.jpg"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        cleanImage = newImage = image;
         this.setPreferredSize(new Dimension(
                 newImage.getWidth(), newImage.getHeight()));
-        newImage = overlay(newImage, refresher.getRefreshData().getText(), Color.white, new Font("Serif", Font.BOLD, 20));
+        newImage = overlay(newImage,
+                text,
+                refresher.getRefreshData().getColor(),
+                refresher.getRefreshData().getFont());
     }
 
     @Override

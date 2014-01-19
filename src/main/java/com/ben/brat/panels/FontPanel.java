@@ -15,9 +15,10 @@ import java.awt.event.ActionListener;
  */
 public class FontPanel extends AbstractColorChooserPanel implements Refreshable {
 
-    private GridBagLayout layout = new GridBagLayout();
+    private GridLayout layout = new GridLayout(2,2);
     private GridBagConstraints guiConstraints = new GridBagConstraints();
     private Refresher _refresher;
+    JLabel fontDescription;
 
     public FontPanel(Refresher refresher) {
         _refresher = refresher;
@@ -26,16 +27,23 @@ public class FontPanel extends AbstractColorChooserPanel implements Refreshable 
         guiConstraints.gridheight = 2;
         guiConstraints.gridwidth = 2;
 
+        JLabel textInst = new JLabel("Change the sample text below");
+
         Font currentFont = _refresher.getRefreshData().getFont();
-        JLabel fontDescription = new JLabel("Current font is: " + currentFont.getFontName() + " with font size: " + currentFont.getSize() + ".");
+        fontDescription = new JLabel("Font is: " + currentFont.getFontName() + " at size " + currentFont.getSize());
 
         JButton fontButton = new JButton("Change the Font");
 
         UpdatingField sampleText = new UpdatingField(refresher);
 
-        Common.addToGridPanel(this, fontDescription, 0, 0, guiConstraints);
-        Common.addToGridPanel(this, fontButton, 1, 0, guiConstraints);
-        Common.addToGridPanel(this, sampleText, 0, 1, guiConstraints);
+        add(fontDescription);
+        add(textInst);
+        add(fontButton);
+        add(sampleText);
+        
+//        Common.addToGridPanel(this, fontDescription, 0, 0, guiConstraints);
+//        Common.addToGridPanel(this, fontButton, 1, 0, guiConstraints);
+//        Common.addToGridPanel(this, sampleText, 0, 1, guiConstraints);
         fontButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e)
@@ -82,6 +90,6 @@ public class FontPanel extends AbstractColorChooserPanel implements Refreshable 
 
     @Override
     public void refresh(RefreshData refreshData) {
-
+        fontDescription.setText("Current font is: " + refreshData.getFont().getFontName() + " with font size: " + refreshData.getFont().getSize() + ".");
     }
 }

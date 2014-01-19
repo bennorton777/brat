@@ -17,7 +17,7 @@ public class UpdatingField extends JTextField {
     static Refresher _refresher;
 
     public UpdatingField(Refresher refresher) {
-        super(30);
+        super(20);
         _refresher = refresher;
         getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -39,19 +39,4 @@ public class UpdatingField extends JTextField {
         _refresher.getRefreshData().setText(getText());
         _refresher.refresh();
     }
-
-//    static class UpdatingDocument extends PlainDocument {
-//
-//        public void insertString(int offs, String str, AttributeSet a)
-//                throws BadLocationException {
-//
-//            if (str == null) {
-//                return;
-//            }
-//            System.err.println("Doing stuff");
-//            _refresher.getRefreshData().setText("HI!");
-//            _refresher.refresh();
-//            super.insertString(offs, str, a);
-//        }
-//    }
 }
